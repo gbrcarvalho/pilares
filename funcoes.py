@@ -1,5 +1,6 @@
 # Trabalhando com funções - def - em Python
 # https://www.youtube.com/watch?v=T0j68JbeGJg&list=PLbIBj8vQhvm0ayQsrhEf-7-8JAj-MwmPr&index=19
+# Parte 1
 
 # Passagem de parametros
 def mensagem(msg):
@@ -40,4 +41,26 @@ mensagem('Executando a função mensagem')
 saudacao()
 saudacao(nome='José', msg='Oi')
 saudacaoX()
-print(saudacaoY())
+print("saudacaoY:", saudacaoY())
+
+# Parte 2
+
+x = input("Digite dois numeros: ")
+x = x.split(' ')
+x = [float(n) for n in x]
+
+print(x)
+
+
+def divisao(n1, n2):
+    if n2 != 0:
+        return n1 / n2
+    return
+
+
+divide = divisao(x[0], x[1])
+
+if divide:
+    print(divide)
+else:
+    print("Divisão por zero!")
