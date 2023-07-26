@@ -75,4 +75,44 @@ else:
     print("Divisão por zero!")
 
 
+def func(a1, a2, a3):
+    return 2*a1, 2*a2, 2*a3
+
+
+v = func(5, 7, 8)
+print(v)
+
 # Parte 3 *args e **kwargs
+
+
+def f1(*args):
+    size = len(args)
+    for n in range(0, size):
+        print(f"{n}: {args[n]}")
+
+
+def f2(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+    idade = kwargs.get('idade')
+
+    if idade:
+        print(idade)
+
+
+# Os args ficam empacotados em uma tupla
+# Os kwargs ficam empacotados em um dicionario
+
+
+f1(1, 'h', 2.6, 'dois ponto seis', (1, 2))
+
+lista = [1, 2, 3, 4, 5]
+
+# Desempacotando uma lista
+n1, n2, *n = lista
+
+print(*lista)
+print(n1, n2, n)
+
+f2(1, 2, 3, 4, nome='Gabriel', sobrenome='Silva', idade='27')
